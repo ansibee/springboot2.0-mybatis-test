@@ -1,0 +1,19 @@
+
+server:
+  servlet:
+    context-path: /springboot2.0-mybatis-test
+  address: localhost
+  port: 8081
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/springboot2.0-mybatis-test?serverTimezone=UTC
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.ansibee.model
+  configuration:
+    map-underscore-to-camel-case: true
